@@ -1,0 +1,34 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyxdw"
+version = "0.4.0"
+description = "Pure Python reader and writer for DocuWorks XDW documents (unofficial)"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE", "NOTICE"]
+authors = [{name = "Norimaki Code"}]
+dependencies = []
+keywords = ["DocuWorks", "XDW", "xdw reader", "xdw writer", "document processing", "pure python"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Operating System :: OS Independent",
+    "Topic :: Office/Business",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+
+[project.optional-dependencies]
+# Independent pixel checks in the tests (preview orientation, MRC composite).
+test = ["Pillow>=10"]
+
+[project.scripts]
+pyxdw = "pyxdw.__main__:main"
+
+[tool.setuptools]
+packages = ["pyxdw"]

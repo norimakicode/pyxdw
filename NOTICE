@@ -1,0 +1,43 @@
+pyxdw
+Copyright (c) 2026 Norimaki Code
+Licensed under the MIT License (see LICENSE).
+
+Third-party origins
+===================
+
+pyxdw/lzh.py (LH4/LH5-style static-Huffman LZH codec)
+
+  Parts of this file correspond closely in structure to ar002 by
+  Haruhiko Okumura and may be adapted from it:
+
+    - _tokenize_lzss: the percolating-update Patricia-tree matcher of
+      ar002 encode.c
+    - _huffman_lengths (heap construction, leaf ordering and length
+      assignment): ar002 maketree.c
+    - _write_auxiliary_tree, _write_main_tree, _write_lzh_block: the
+      length-table and block encoding of ar002 huf.c
+
+  The author of ar002 states at the distribution site:
+
+    "ar002 -- written by Haruhiko Okumura and released to the public domain"
+
+    https://okumuralab.org/~okumura/compression/ar002/00README.txt
+
+  The Python code is restructured for Python (for example, token lists
+  instead of packed buffers, explicit flag checks, input validation, no
+  file, CRC or progress handling). Which copy of ar002 was consulted
+  during the original development was not recorded. Source hashes and
+  open questions are listed in docs/third_party.md.
+
+  The MIT License above applies to the contributions of the pyxdw
+  authors. It does not restrict public-domain material.
+
+  _package_merge_lengths is based on the Package-Merge algorithm
+  described in L. L. Larmore and D. S. Hirschberg, "A Fast Algorithm for
+  Optimal Length-Limited Huffman Codes", Journal of the ACM 37(3), 1990,
+  pp. 464-473. Its design and test records are described in
+  docs/third_party.md.
+
+  The decoder follows the LH4/LH5 bit-stream format. It decodes with
+  canonical-code dictionaries rather than the lookup tables of the C
+  implementations.

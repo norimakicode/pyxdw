@@ -1,0 +1,23 @@
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.pytest_cache/
+
+# Test fixtures are not distributed (see docs/validation.md)
+testdata/
+
+# Publication working notes: review before deciding whether to publish them
+publication/
+
+# Local secrets, operating-system metadata and document files
+.env
+.env.*
+.DS_Store
+*.xdw
+*.xbd
+*.dll
+*.exe
