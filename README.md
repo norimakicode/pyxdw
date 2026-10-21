@@ -117,6 +117,21 @@ DocuWorks API. The skipped modules need external fixtures, not a DocuWorks
 installation. Offline tests cover codec and parser behaviour; full document
 editing checks need those fixtures. See the coverage details in the validation guide.
 
+## Acknowledgments
+
+Special thanks to **Haruhiko Okumura**, whose public-domain ar002 compression
+code contributed to the development of pyxdw's LZH codec.
+
+In his [historical account of compression software development](https://okumuralab.org/~okumura/compression/1990.html),
+Okumura welcomed redistribution and modification of his software, writing:
+
+> 無断転載無断改変等歓迎。
+
+We are grateful for his contributions and his spirit of open software sharing.
+
+For details on code provenance, see [NOTICE](NOTICE) and
+[Third-party origins](docs/third_party.md).
+
 ## License
 
 [MIT License](LICENSE). Copyright (c) 2026 Norimaki Code.
