@@ -86,6 +86,21 @@ python -m unittest discover -s tests
 XDW のサンプルファイルは同梱していません。必要なテストは環境変数 `PYXDW_TESTDATA` が無ければスキップされます。公式 DocuWorks API による作成方法は [docs/validation.md](docs/validation.md) を参照してください。スキップ理由は外部フィクスチャの不足であり、DocuWorks本体がないためではありません。
 データなしではコーデックやパーサーを検証し、文書編集の全体検証には外部フィクスチャが必要です。
 
+## 謝辞
+
+パブリックドメインの圧縮コード ar002 を通じて pyxdw の LZH コーデック開発に
+貢献された奥村晴彦氏に、心より感謝申し上げます。
+
+奥村氏は、[圧縮ソフトウェア開発の歴史についての記録](https://okumuralab.org/~okumura/compression/1990.html)の中で、
+ソフトウェアの再配布や改変を歓迎し、次のように記しています。
+
+> 無断転載無断改変等歓迎。
+
+その貢献と、オープンなソフトウェア共有の精神に深く感謝します。
+
+コードの由来についての詳細は [NOTICE](NOTICE) と
+[第三者由来の情報](docs/third_party.md) を参照してください。
+
 ## ライセンス
 
 [MIT License](LICENSE)。Copyright (c) 2026 Norimaki Code。
